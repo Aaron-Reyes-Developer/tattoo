@@ -14,7 +14,7 @@ include('./conexion.php');
     <meta name="theme-color" content="#0C0C0C">
     <link rel="icon" type="image/png" href="./imagenes/logoTattoo.ico">
     <meta name="description" content="Explora nuestra galería de tatuajes impresionantes y creativos. Desde tatuajes en blanco y negro hasta diseños vibrantes de estilo acuarela, tenemos opciones para todos los gustos. Nuestros artistas del tatuaje expertos te ayudarán a transformar tu visión en arte corporal único. ¡Reserva tu cita hoy para obtener el tatuaje de tus sueños!">
-
+    <meta name="keywords" content="tatuajes, arte corporal, tatuador, tatuajes personalizados, tatuajes manta, manta tatuajes">
 
     <!-- Fuente Dosis -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
