@@ -262,7 +262,8 @@ include('./conexion.php');
                     $queryProducto = mysqli_query($conn, "SELECT 
                     pro.id_producto, 
                     pro.nombre , 
-                    pro.precio , 
+                    pro.precio ,
+                    pro.agotado, 
                     ima.imagen
                     FROM productos pro
                     INNER JOIN imagenes_producto ima
@@ -276,7 +277,22 @@ include('./conexion.php');
                     ?>
                         <div class="cartaProducto">
 
-                            <a href="./DETALLE/DETALLEPRODUCTO/detalleProducto.php?producto=<?php echo $recorrerProductos['id_producto'] ?>" class="contenedorImagenProducto"><img src="<?php echo 'data:image/jpeg;base64,' . base64_encode($recorrerProductos['imagen']) ?>" alt="<?php echo $recorrerProductos['nombre'] ?>"></a>
+                            <!-- imagen pproducto -->
+                            <a href="./DETALLE/DETALLEPRODUCTO/detalleProducto.php?producto=<?php echo $recorrerProductos['id_producto'] ?>" class="contenedorImagenProducto">
+
+                                <img src="<?php echo 'data:image/jpeg;base64,' . base64_encode($recorrerProductos['imagen']) ?>" alt="<?php echo $recorrerProductos['nombre'] ?>">
+
+                                <!-- imagen agotado -->
+                                <?php
+                                if ($recorrerProductos['agotado']) {
+                                ?>
+                                    <div class="contenedorImagenAgotado"><img src="./imagenes/iconos/agotado.png" alt=""></div>
+                                <?php
+                                }
+                                ?>
+
+                            </a>
+
 
                             <div class="contenedorTextoProducto">
 

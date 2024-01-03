@@ -237,6 +237,7 @@ if (isset($_REQUEST['eliminar'])) {
 
                     <div id="carouselExampleIndicators<?php echo $contador ?>" class="carousel slide" style="background-color: #424242; max-width: 200px; height: 350px; position: relative;">
 
+
                         <!-- editar -->
                         <a href="./editarProducto.php?editar=<?php echo $id_producto ?>" style="position: absolute; left: 5px; top: 5px; z-index: 3; cursor: pointer;">
                             <img src="../../imagenes/iconos/editar.png" alt="" width="25px">
@@ -276,6 +277,16 @@ if (isset($_REQUEST['eliminar'])) {
 
                                 <a href="../../DETALLE/DETALLEPRODUCTO/detalleProducto.php?producto=<?php echo $id_producto ?>" class="carousel-item <?php echo $contadorImagen - 1 == 0 ? 'active' : '' ?>" style="width: 100%; height: 100%; background-color: #DEDEDE;">
                                     <img src="<?php echo 'data:image/jpeg;base64,' . base64_encode($row['imagen']) ?>" class="d-block w-100" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
+                                    
+                                    <!-- imagen agotado -->
+                                    <?php
+                                    if ($recorrerDatos['agotado']) {
+                                    ?>
+                                        <div class="contenedorImagenAgotado" style="position: absolute; bottom: 3rem;"><img src="../../imagenes/iconos/agotado.png" alt=""></div>
+                                    <?php
+                                    }
+
+                                    ?>
                                 </a>
 
                             <?php

@@ -50,7 +50,16 @@
     background-color: rgba(255, 0, 0, 0.479);
     cursor: pointer;
 }
+.contenedorImagenAgotado{
+    position: absolute;
+    bottom: 3rem;
+}
 
+
+
+
+
+/* FORMULARIO */
 .contenedorFormulario{
     width: 40%;
     height: 100%;

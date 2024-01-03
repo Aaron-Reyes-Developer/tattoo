@@ -91,6 +91,14 @@ $queryDetalleImagenes = mysqli_query($conn, "SELECT * FROM imagenes_producto WHE
                 <div class="carta">
                     <img src="<?php echo 'data:image/jpeg;base64,' . base64_encode($rowImagen['imagen']) ?>" alt="">
                     <a class="eliminar" onclick="eliminarImagen(<?php echo $rowImagen['id_imagenes_producto'] ?>)">X</a>
+                    <?php
+                    if ($recorrerEditar['agotado']) {
+                    ?>
+                        <div class="contenedorImagenAgotado"><img src="../../imagenes/iconos/agotado.png    " alt=""></div>
+                    <?php
+                    }
+
+                    ?>
                 </div>
 
             <?php
@@ -171,6 +179,14 @@ $queryDetalleImagenes = mysqli_query($conn, "SELECT * FROM imagenes_producto WHE
                 </div>
 
 
+                <!-- AGOTADO -->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" name="agotado" value="" id="flexCheckDefault" <?php if ($recorrerEditar['agotado']) echo 'checked' ?>>
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Agotado
+                    </label>
+                </div>
+
                 <div id="contenedorDatosVacios"></div>
 
 
@@ -233,6 +249,7 @@ $queryDetalleImagenes = mysqli_query($conn, "SELECT * FROM imagenes_producto WHE
         var contenedorDatosVacios = document.getElementById('contenedorDatosVacios')
 
 
+        // cuando se envie el formulario
         formulario.addEventListener('submit', function(e) {
 
             e.preventDefault()

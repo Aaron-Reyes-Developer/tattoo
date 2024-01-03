@@ -121,6 +121,15 @@ $queryImagen = mysqli_query($conn, "SELECT * FROM imagenes_producto WHERE fk_id_
 
                         <div class="carousel-item <?php echo $contador - 1  == 0 ? 'active' : '' ?>">
                             <img src="<?php echo 'data:image/jpeg;base64,' . base64_encode($row['imagen']) ?>" class="d-block w-100" alt="<?php echo $recorrerProducto['nombre'] ?>">
+
+                            <!-- imagen agotado -->
+                            <?php
+                            if ($recorrerProducto['agotado']) {
+                            ?>
+                                <div class="contenedorImagenAgotado" style="position: absolute; bottom: 3rem; width: 100%; display: flex; justify-content: center;"><img src="../../imagenes/iconos/agotado.png" alt=""></div>
+                            <?php
+                            }
+                            ?>
                         </div>
 
                     <?php
@@ -147,6 +156,7 @@ $queryImagen = mysqli_query($conn, "SELECT * FROM imagenes_producto WHERE fk_id_
 
             <!-- DETALLE PRDOCUTO -->
             <div class="contenedorTexto">
+
                 <h1><?php echo $recorrerProducto['nombre'] ?></h1>
                 <hr>
 

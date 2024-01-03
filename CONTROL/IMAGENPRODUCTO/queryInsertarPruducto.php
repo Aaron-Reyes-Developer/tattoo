@@ -41,11 +41,15 @@ if (isset($_POST['id_producto'])) {
 
     $id = $_POST['id_producto'];
 
+    $agotado = isset($_POST['agotado']) ? 1  : 0;
+
+
     // query editar datos
     $queryEditarDatos = mysqli_query($conn, "UPDATE productos
     SET  nombre = '$nombre' , 
     descripcion = '$descripcion', 
     precio = $precio, 
+    agotado = $agotado,
     fecha = current_timestamp(), 
     fk_id_categoria_producto = $categoriaProducto    
     WHERE id_producto = '$id' ");

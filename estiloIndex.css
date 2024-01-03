@@ -312,6 +312,9 @@ body{
     color: #fff;
     font-size: 1.2rem;
 }
+
+
+/* CARTA PRODUCTO */
 .cartaProducto{
     width: auto;
     height: 400px;
@@ -321,17 +324,32 @@ body{
     transition: 0.2s ease all;
     cursor: pointer;
     text-decoration: none;
+
 }
 .contenedorImagenProducto{
     width: 100%;
     height: 70%;
     background-color: rgb(255, 255, 255);
+    position: relative;
 }
 .contenedorImagenProducto img{
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
+
+/* IMAGEN AGOTADO */
+.contenedorImagenAgotado{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .contenedorTextoProducto{
     width: 100%;
     height: 30%;
