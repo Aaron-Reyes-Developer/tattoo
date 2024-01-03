@@ -171,7 +171,6 @@ $queryDetalleImagenes = mysqli_query($conn, "SELECT * FROM imagenes_producto WHE
                 </div>
 
 
-
                 <div id="contenedorDatosVacios"></div>
 
 
