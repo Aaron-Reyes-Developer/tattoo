@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    color: #fff ;
+    letter-spacing: 2px;
+}
+
+:root{
+    --colorFondo: #0C0C0C;
+    --colorSecundario: #FCBA0C;
+    --fuente:'Dosis', sans-serif;
+    --fondoFooter: #303030;
+}
+
+body{
+    background-color: var(--colorFondo);
+    position: relative;
+}
+
+.astronauta{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+}
+
+.navbar{
+    background-color: #353535;
+    padding-left: 30px;
+    color: #fff !important;
+}
+.nav-item a:hover{
+    color: var(--colorSecundario) !important;
+    cursor: pointer;
+    
+}
+.nav-item a, .navbar-brand{
+    color: #fff !important;
+}
+.disabled, .salir{ color: #5e5e5e !important; }
+
+
+
+
+/* MAIN */
+.main{
+    width: 100%;
+    height: calc(100vh - 57px);
+    padding: 50px 10px 0 10px;
+}
+.contenedorMain{
+    width: 100%;
+    height: auto;
+}
+
+/* HORARIO */
+.contenedorHorario, .contenedorEspecialidades{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+.contenedorHorario ul .domingo{
+    color: rgb(255, 49, 49);
+}
+.contenedorImprimirHorario{
+    width: 60%;
+    height: auto;
+}
+.contenedorFormulario{
+    width: 40%;
+}
+
+
+/* FOMRULARIO */
+.formulario{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    color: #424242;
+}
+.formulario .inputHorario{
+    min-width: 200px;
+}
+.formulario .botonGuardar{
+    background-color: var(--colorSecundario);
+    border: 1px solid #424242;
+}
+.formulario .horarioDomingo{
+    color: red;
+}
+
+
+@media screen and (max-width: 750px) {
+    .contenedorHorario{
+        flex-direction: column-reverse;
+    }
+    .contenedorEspecialidades{
+        flex-direction: column;
+    }
+
+    .contenedorImprimirHorario, .contenedorFormulario{
+        width: 100%;
+    }
+}

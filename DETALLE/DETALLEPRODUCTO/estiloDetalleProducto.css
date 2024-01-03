@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    color: #fff;
+}
+
+:root{
+    --colorFondo: #0C0C0C;
+    --colorSecundario: #FCBA0C;
+    --fuente:'Dosis', sans-serif;
+    --fondoFooter: #303030;
+}
+
+/* MAIN */
+.main{
+    width: 100%;
+    height: 100vh;
+    padding-top: 9rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    
+}
+.seccionProducto{
+    display: flex;
+}
+.contenedorImagen{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+.contenedorImagen img{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+.contenedorTexto{
+    width: 60%;
+    padding-left: 1rem;
+    border-left: 1px solid #fff;
+}
+.contenedorTexto hr{
+    margin-left: -1rem;
+}
+.contenedorTexto .precio{
+    font-size: 2.5rem;
+    color: var(--colorSecundario);
+}
+.contenedorDetalle{
+    width: 70%;
+    margin: 20px 0;
+}
+.contenedorTexto button{
+    width: 50%;
+    padding: 10px 0;
+    color: #424242;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    border: none;
+    background-color: var(--colorSecundario);
+    border-radius: 4px;
+    transition: 0.2s ease all;
+}
+.contenedorTexto button:hover{
+    background-color: #25D366;
+    border-radius: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+
+/* SECCION TATUAJES SIMILARES */
+.seccionTatuajesSimilares{
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+}
+.seccionTatuajesSimilares h2{   margin-bottom: 30px;    }
+.contenedorTatuajesSimilares{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 20px;
+   
+}
+.contenedorImagenTatuajeSimilar{
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    background-color: #fff;
+}
+.contenedorImagenTatuajeSimilar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 760px) {
+    .main{
+        padding-left: 5px;
+        padding-right: 5px ;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main{
+        padding-top: 4rem;
+    }
+    .seccionProducto{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        /* padding-top: 5rem; */
+        
+    }
+    .contenedorImagen{
+        width: 100%;
+        
+    }
+   .contenedorTexto{
+        width: 100%;
+        border-left: 0;
+        border-top: 1px solid #aaaaaa;
+        padding-top: 1rem;
+        padding-bottom: 50px;
+        transition: 0.3s ease-in-out all;
+    }
+    .contenedorDetalle{
+        width: 100%;
+    }
+
+    .contenedorTexto button{
+        width: 90%;
+        padding: 8px 0;
+        margin: auto;
+        font-size: 1.3rem;
+        
+    }
+}

@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    color: #fff ;
+    letter-spacing: 2px;
+}
+
+:root{
+    --colorFondo: #0C0C0C;
+    --colorSecundario: #FCBA0C;
+    --fuente:'Dosis', sans-serif;
+    --fondoFooter: #303030;
+}
+
+body{
+    background-color: var(--colorFondo);
+    position: relative;
+}
+
+.astronauta{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+}
+
+.navbar{
+    background-color: #353535;
+    padding-left: 30px;
+    color: #fff !important;
+}
+.nav-item a:hover{
+    color: var(--colorSecundario) !important;
+    cursor: pointer;
+    
+}
+.nav-item a, .navbar-brand{
+    color: #fff !important;
+}
+.disabled, .salir{ color: #5e5e5e !important; }
+
+
+
+/* MAIN */
+.main{
+    width: 100%;
+    height: auto;
+    padding: 30px 0 0 0;
+}
+.contenedorCategorias{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 1rem;
+}
+.cartaCategoria{
+    width: 50%;
+    color: #424242;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.formulario .botonGuardar{
+    background-color: var(--colorSecundario);
+    width: 30%;
+    min-width: 100px;
+}
+.formulario label{
+    color: #424242;
+}
+.cartaCategoria ul li{
+    color: #424242;
+}
+.cartaCategoriaProductos{
+    background-color: #FFE6A7;
+}
+
+
+
+/* responsive formualrios */
+@media screen and (max-width: 570px) {
+
+    .main{  padding-bottom: 50px;   }
+
+    h1{ margin-left: 20px;  }
+
+    .contenedorCategorias{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 20px;
+    } 
+    
+    .cartaCategoria{    width: 100%;    }
+}
+

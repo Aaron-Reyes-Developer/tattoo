@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    color: #fff;
+}
+
+:root{
+    --colorFondo: #0C0C0C;
+    --colorSecundario: #FCBA0C;
+    --fuente:'Dosis', sans-serif;
+    --fondoFooter: #303030;
+}
+
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+    
+}
+body{
+    background-color: var(--colorFondo);
+}
+h2{
+    letter-spacing: 2px;
+    font-size: 25px ;
+}
+
+.page{
+    position: relative;
+}

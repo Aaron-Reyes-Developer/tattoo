@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    color: #fff ;
+    letter-spacing: 2px;
+}
+
+:root{
+    --colorFondo: #0C0C0C;
+    --colorSecundario: #FCBA0C;
+    --fuente:'Dosis', sans-serif;
+    --fondoFooter: #303030;
+}
+
+body{
+    background-color: var(--colorFondo);
+    position: relative;
+}
+h1,a,h2,li,label,hr{
+    color: #424242;
+}
+.astronauta{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+}
+
+.navbar{
+    background-color: #353535;
+    padding-left: 30px;
+    color: #fff !important;
+}
+.nav-item a:hover{
+    color: var(--colorSecundario) !important;
+    cursor: pointer;
+    
+}
+.nav-item a, .navbar-brand{
+    color: #fff !important;
+}
+.disabled, .salir{ color: #5e5e5e !important; }
+
+
+
+
+/* MAIN */
+.main{
+    width: 100%;
+    height: auto;
+    padding: 50px 10px 0 10px;
+}
+.contenedorFlex{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 70px;
+}
+
+
+/* formulario */
+.contenedorFormulario{
+    width: 350px ;
+    min-width: 350px;
+    height: auto;
+}
+.contenedorFormulario .formulario{
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+    padding: 20px;
+}
+.formulario .botonGuardar{    background-color: var(--colorSecundario);}
+.formulario select option{    color: #303030;}
+
+
+
+
+/* producto */
+.contenedorProductos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.cartaProducto{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #424242;
+    cursor: pointer;
+
+}
+.cartaProducto .eliminar{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    background-color: rgba(255, 0, 0, 0.404);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.cartaProducto .editar{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    background-color: rgba(209, 156, 11, 0.548);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.contenedorImagen{
+    width: 100%;
+    height: 60%;
+    background-color: #fff;
+}
+.contenedorImagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.contenedorTexto{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+}
+.contenedorNombrePrecio{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.paginacion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 800px) {
+    .contenedorFlex{
+        flex-direction: column;
+    }
+
+    .contenedorFormulario{
+        width: 100%;
+        min-width: auto;
+    }
+
+
+    @media screen and (max-width: 450px){
+        .cartaProducto{
+            width: 150px;
+            height: 200px;
+        }
+    }
+}
+
+
+@media screen and (max-width:435px) {
+    .carousel{
+        width: 170px;
+    }
+}
